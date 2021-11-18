@@ -22,7 +22,7 @@ class DownloadLicensesTestKitSpec extends IntegrationSpec {
     def "Should correctly take project.buildDir into account for generated reports"() {
         given:
         buildFile << """
-apply plugin: 'com.github.hierynomus.license'
+apply plugin: 'com.github.fab-10.license'
 apply plugin: 'java'
 buildDir = "generated"
 

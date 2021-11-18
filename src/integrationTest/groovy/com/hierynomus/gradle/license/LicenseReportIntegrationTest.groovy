@@ -17,7 +17,7 @@ plugins {
     id "java"
 }
 
-apply plugin: "com.github.hierynomus.license-report"
+apply plugin: "io.github.fab-10.license-report"
 
 group = "testGroup"
 version = "1.5"
@@ -288,7 +288,7 @@ dependencies {
 
 downloadLicenses {
     aliases[license("The Apache Software License, Version 2.0", "MY_URL")] = ["Apache 2", license("The Apache 2", "url"), license("Apache", "urrrl")]
-    
+
     licenses = [
         "testDependency1.jar": license("Apache 2"),
         "testDependency2.jar": license("The Apache 2", "url"),
@@ -635,7 +635,7 @@ dependencies {
 downloadLicenses {
     reportByDependency = true
     reportByLicenseType = true
-    
+
     report {
         xml.enabled = true
         json.enabled = true
@@ -661,7 +661,7 @@ dependencies {
 downloadLicenses {
     reportByDependency = true
     reportByLicenseType = true
-    
+
     report {
         xml.enabled = true
         json.enabled = true
@@ -691,7 +691,7 @@ dependencies {
 downloadLicenses {
     reportByDependency = false
     reportByLicenseType = false
-    
+
     report {
         xml.enabled = true
         json.enabled = true
@@ -717,7 +717,7 @@ dependencies {
 downloadLicenses {
     reportByDependency = true
     reportByLicenseType = true
-    
+
     report {
         xml.enabled = false
         json.enabled = false

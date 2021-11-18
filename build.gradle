@@ -25,7 +25,7 @@ apply plugin: 'com.github.hierynomus.license'
 
 defaultTasks 'build'
 
-group = 'com.hierynomus.gradle.plugins'
+group = 'io.github.fab-10'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -183,25 +183,28 @@ def pomConfig = {
 gradlePlugin {
     plugins {
         licensePlugin {
-            id = "com.github.hierynomus.license"
+            id = "io.github.fab-10.license"
             implementationClass = "nl.javadude.gradle.plugins.license.LicensePlugin"
         }
 
         licenseBasePlugin {
-            id = "com.github.hierynomus.license-base"
+            id = "io.github.fab-10.license-base"
             implementationClass = "com.hierynomus.gradle.license.LicenseBasePlugin"
         }
 
         licenseReportPlugin {
-            id = "com.github.hierynomus.license-report"
+            id = "io.github.fab-10.license-report"
             implementationClass = "com.hierynomus.gradle.license.LicenseReportingPlugin"
         }
     }
 }
 
 pluginBundle {
-    website = "https://github.com/hierynomus/license-gradle-plugin"
-    vcsUrl = "https://github.com/hierynomus/license-gradle-plugin.git"
+    mavenCoordinates {
+        groupId = "io.github.fab-10"
+    }
+    website = "https://github.com/fab-10/license-gradle-plugin"
+    vcsUrl = "https://github.com/fab-10/license-gradle-plugin.git"
     tags = ["gradle", "plugin", "license"]
     plugins {
         licensePlugin {
